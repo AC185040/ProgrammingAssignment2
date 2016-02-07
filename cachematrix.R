@@ -13,7 +13,7 @@ makeCacheMatrix <- function(x = matrix())
     }
     get <- function() x
     setinvers <- function(inverse) invrs <<- inverse
-    getinvers <- function() inv
+    getinvers <- function() invrs
     list (set = set, get = get, setinvers = setinvers, getinvers = getinvers)
 }    
 
@@ -39,7 +39,7 @@ cacheSolve <- function(x, ...)
 
 
 ## Execution:
-## x = rbind(c(2, -3/5), c(-3/5, 2))
+x = rbind(c(2, -3/5), c(-3/5, 2))
 > m = makeCacheMatrix(x)
 > m$get()
 [,1] [,2]
